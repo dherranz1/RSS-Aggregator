@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rssFeedFragment">
+
+    <fragment
+        android:id="@+id/rssFeedFragment"
+        android:name="com.dherranz1.rss_aggregator.presentation.RssFeedFragment"
+        android:label="@string/fragment_rss_feed_label"
+        tools:layout="@layout/fragment_rss_feed" />
+    <fragment
+        android:id="@+id/rssManagementFragment"
+        android:name="com.dherranz1.rss_aggregator.presentation.RssManagementFragment"
+        android:label="@string/fragment_rss_management_label"
+        tools:layout="@layout/fragment_rss_managment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dherranz1.rss_aggregator.presentation.ProfileFragment"
+        android:label="@string/fragment_rss_profile_label"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

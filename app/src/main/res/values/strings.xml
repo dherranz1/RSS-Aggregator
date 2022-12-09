@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">RSS-Aggregator</string>
+
+    <!-- Test strings -->
+    <string name="hello_fragment_rss">RSS</string>
+    <string name="hello_fragment_management">MANAGEMENT</string>
+    <string name="hello_fragment_profile">PROFILE</string>
+
+    <!-- Fragment labels -->
+    <string name="fragment_rss_feed_label">Fragment feed rss</string>
+    <string name="fragment_rss_management_label">Fragment management</string>
+    <string name="fragment_rss_profile_label">Fragment profile</string>
+
+    <!-- Menu items -->
+    <string name="menu_item_rss">RSS</string>
+    <string name="menu_item_management">Gestión</string>
+    <string name="menu_item_profile">Perfil</string>
+
 </resources>
