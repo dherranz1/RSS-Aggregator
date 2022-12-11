@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.BottomSheetDialog">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/standard_bottom_sheet"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <!-- Drag handle for accessibility -->
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:id="@+id/drag_handle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_rss_input_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/input_rss_name"
+            app:layout_constraintTop_toBottomOf="@id/drag_handle"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_rss_input_url"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/input_rss_url"
+            app:layout_constraintTop_toBottomOf="@id/form_rss_input_name"/>
+
+        <Button
+            android:id="@+id/form_rss_button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_rss_button_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/form_rss_input_url"/>
+
+        <Button
+            android:id="@+id/form_rss_button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_rss_button_cancel"
+            app:layout_constraintEnd_toStartOf="@id/form_rss_button_save"
+            app:layout_constraintTop_toBottomOf="@id/form_rss_input_url"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
