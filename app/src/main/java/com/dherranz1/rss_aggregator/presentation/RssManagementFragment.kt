@@ -25,6 +25,7 @@ class RssManagementFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val modalBottomSheet = BottomSheetDialog()
+        modalBottomSheet.setStyle(DialogFragment.STYLE_NORMAL,R.style.DialogStyle)
 
         val addButton = view.findViewById<ImageView>(R.id.toolbar_manage_button_add)
 
@@ -32,7 +33,6 @@ class RssManagementFragment : Fragment() {
         // Use this to programmatically apply behavior attributes
 
         addButton.setOnClickListener {
-            modalBottomSheet.setStyle(DialogFragment.STYLE_NORMAL,R.style.DialogStyle)
             modalBottomSheet.show(childFragmentManager, BottomSheetDialog.TAG)
         }
 
