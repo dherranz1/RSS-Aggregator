@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     tools:context=".presentation.BottomSheetDialog">
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/standard_bottom_sheet"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
         <!-- Drag handle for accessibility -->
         <com.google.android.material.bottomsheet.BottomSheetDragHandleView
@@ -50,7 +44,4 @@
             app:layout_constraintEnd_toStartOf="@id/form_rss_button_save"
             app:layout_constraintTop_toBottomOf="@id/form_rss_input_url"/>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
