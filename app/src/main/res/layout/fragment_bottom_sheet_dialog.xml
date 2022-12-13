@@ -3,29 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/general_padding"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
     tools:context=".presentation.BottomSheetDialog">
 
         <!-- Drag handle for accessibility -->
-        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
-            android:id="@+id/drag_handle"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/bottom_sheet_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"/>
+            style="@style/BottomSheet_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/bottom_sheet_title"/>
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/form_rss_input_name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:hint="@string/input_rss_name"
-            app:layout_constraintTop_toBottomOf="@id/drag_handle"/>
+            style="@style/BottomSheet_input"
+            app:layout_constraintTop_toBottomOf="@id/bottom_sheet_title"/>
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/form_rss_input_url"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:hint="@string/input_rss_url"
+            style="@style/BottomSheet_input"
             app:layout_constraintTop_toBottomOf="@id/form_rss_input_name"/>
 
         <Button

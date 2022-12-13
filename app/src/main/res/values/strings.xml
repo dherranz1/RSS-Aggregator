@@ -21,7 +21,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!-- Rss form -->
+    <!-- Bottom sheet form -->
+    <string name="bottom_sheet_title">Agregar Rss</string>
     <string name="input_rss_name">Nombre Rss</string>
     <string name="input_rss_url">Url Rss</string>
     <string name="input_rss_button_save">Guardar</string>

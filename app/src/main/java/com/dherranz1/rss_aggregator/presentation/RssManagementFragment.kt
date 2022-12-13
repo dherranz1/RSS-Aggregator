@@ -10,6 +10,7 @@ import androidx.fragment.app.DialogFragment
 import com.dherranz1.rss_aggregator.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.snackbar.Snackbar
 
 class RssManagementFragment : Fragment() {
 

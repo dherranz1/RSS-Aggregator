@@ -20,5 +20,23 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
     </style>
+    <style name="BottomSheet_title" parent="DialogStyle">
+        <item name="android:textSize">@dimen/bottom_sheet_title_text_size</item>
+    </style>
+    <style name="BottomSheet_input" parent="DialogStyle">
+        <item name="android:layout_marginTop">@dimen/bottom_sheet_input_margin_top</item>
+    </style>
+
+
+    <!-- Toolbar -->
+    <style name="Toolbar" parent="Theme.RSSAggregator">
+        <item name="android:padding">@dimen/general_padding</item>
+    </style>
+    <style name="Toolbar_title" parent="Theme.RSSAggregator">
+        <item name="android:textSize">@dimen/toolbar_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
 
 </resources>
