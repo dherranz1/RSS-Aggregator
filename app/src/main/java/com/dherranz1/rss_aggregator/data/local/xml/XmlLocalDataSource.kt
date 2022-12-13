@@ -1,6 +1,7 @@
 package com.dherranz1.rss_aggregator.data.local.xml
 
 import android.content.SharedPreferences
+import android.util.Log
 import com.dherranz1.app.domain.ErrorApp
 import com.dherranz1.app.functional.Either
 import com.dherranz1.app.functional.left
@@ -14,6 +15,7 @@ class XmlLocalDataSource(private val sharedPreferences: SharedPreferences) : Loc
 
     override fun save(name: String, url: String) {
         editor.putString(url,name).apply()
+        Log.d("@dev","xml saved")
     }
 
     override fun getAllSources(): List<SourceRss> =
