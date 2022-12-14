@@ -9,5 +9,6 @@
     <!-- BottomSheet -->
     <dimen name="bottom_sheet_title_text_size">18sp</dimen>
     <dimen name="bottom_sheet_input_margin_top">10dp</dimen>
+    <dimen name="bottom_sheet_input_height">40dp</dimen>
 
 </resources>

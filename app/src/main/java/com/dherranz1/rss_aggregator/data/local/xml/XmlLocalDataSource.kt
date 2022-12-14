@@ -13,10 +13,9 @@ class XmlLocalDataSource(private val sharedPreferences: SharedPreferences) : Loc
 
     private val editor = sharedPreferences.edit()
 
-    override fun save(name: String, url: String) {
+    override fun save(name: String, url: String) =
         editor.putString(url,name).apply()
-        Log.d("@dev","xml saved")
-    }
+
 
     override fun getAllSources(): List<SourceRss> =
         sharedPreferences.all.map { rss ->

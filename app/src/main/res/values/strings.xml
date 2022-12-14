@@ -27,6 +27,10 @@
     <string name="input_rss_url">Url Rss</string>
     <string name="input_rss_button_save">Guardar</string>
     <string name="input_rss_button_cancel">Cancelar</string>
-
+    
+    <!-- Snackbar messages -->
+    <string name="snackbar_content_updated">Contenido actualizado</string>
+    <string name="snackbar_error">Se ha producido un error</string>
+    <string name="snackbar_success">Operación realizada con éxito</string>
 
 </resources>

@@ -9,6 +9,7 @@
     <include layout="@layout/toolbar_manage_rss" android:id="@+id/toolbar_management"/>
 
     <TextView
+        android:id="@+id/example_text_management"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_fragment_management"

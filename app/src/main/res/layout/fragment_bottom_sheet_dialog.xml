@@ -30,7 +30,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/form_rss_input_url"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
             android:hint="@string/input_rss_url"
             style="@style/BottomSheet_input"
             app:layout_constraintTop_toBottomOf="@id/form_rss_input_name"/>
@@ -40,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/input_rss_button_save"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/form_rss_input_url"/>
 
@@ -48,8 +48,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/input_rss_button_cancel"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toStartOf="@id/form_rss_button_save"
-            app:layout_constraintTop_toBottomOf="@id/form_rss_input_url"/>
+            app:layout_constraintTop_toTopOf="@id/form_rss_button_save"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.dherranz1.rss_aggregator.domain.SaveSourceRssUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SaveRssViewModel(private val saveSourceRssUseCase : SaveSourceRssUseCase) : ViewModel() {
 
@@ -15,14 +16,25 @@ class SaveRssViewModel(private val saveSourceRssUseCase : SaveSourceRssUseCase) 
         MutableLiveData<RssUiState>()
     }*/
 
+    var rssFeedPublisher: MutableLiveData<RssUiState> =
+        MutableLiveData<RssUiState>()
+
+
     fun saveSourceRss(name : String, url : String){
+
         viewModelScope.launch(Dispatchers.IO) {
             saveSourceRssUseCase.execute(name, url)
-            Log.d("@dev","view model executed, $name, $url")
+
+            rssFeedPublisher.postValue(
+                RssUiState(
+                    isSuccess = true
+                )
+            )
         }
     }
 
-    /*data class RssUiState(
+
+    data class RssUiState(
         val isSuccess : Boolean = false
-    )*/
+    )
 }

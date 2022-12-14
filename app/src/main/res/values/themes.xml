@@ -25,8 +25,10 @@
     </style>
     <style name="BottomSheet_input" parent="DialogStyle">
         <item name="android:layout_marginTop">@dimen/bottom_sheet_input_margin_top</item>
+        <item name="android:layout_height">@dimen/bottom_sheet_input_height</item>
     </style>
 
+    <!-- Buttons -->
 
     <!-- Toolbar -->
     <style name="Toolbar" parent="Theme.RSSAggregator">
