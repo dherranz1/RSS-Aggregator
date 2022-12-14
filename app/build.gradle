@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.dherranz1.rss_aggregator"
-        minSdk 23
+        minSdk 22
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -45,9 +45,20 @@ dependencies {
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
+    // View model // LiveData
+    def lifecycle_version = "2.5.1"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
     implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+
+    // BottomSheet
+    implementation 'com.google.android.material:material:1.7.0'
 
 
     implementation 'androidx.core:core-ktx:1.7.0'

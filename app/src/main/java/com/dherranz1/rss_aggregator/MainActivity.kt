@@ -3,6 +3,7 @@ package com.dherranz1.rss_aggregator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
+import com.dherranz1.rss_aggregator.presentation.RssFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

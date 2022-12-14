@@ -6,11 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.RssManagementFragment">
 
+    <include layout="@layout/toolbar_manage_rss" android:id="@+id/toolbar_management"/>
+
     <TextView
+        android:id="@+id/example_text_management"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_fragment_management"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_management"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

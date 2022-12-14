@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/general_padding"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:context=".presentation.BottomSheetDialog">
+
+        <!-- Drag handle for accessibility -->
+        <TextView
+            android:id="@+id/bottom_sheet_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BottomSheet_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/bottom_sheet_title"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_rss_input_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/input_rss_name"
+            style="@style/BottomSheet_input"
+            app:layout_constraintTop_toBottomOf="@id/bottom_sheet_title"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/form_rss_input_url"
+            android:layout_width="match_parent"
+            android:hint="@string/input_rss_url"
+            style="@style/BottomSheet_input"
+            app:layout_constraintTop_toBottomOf="@id/form_rss_input_name"/>
+
+        <Button
+            android:id="@+id/form_rss_button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_rss_button_save"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/form_rss_input_url"/>
+
+        <Button
+            android:id="@+id/form_rss_button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_rss_button_cancel"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toStartOf="@id/form_rss_button_save"
+            app:layout_constraintTop_toTopOf="@id/form_rss_button_save"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

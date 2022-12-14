@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.RSSAggregator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.RSSAggregator" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,4 +13,32 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- BottomSheet -->
+    <style name="DialogStyle" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <style name="BottomSheet_title" parent="DialogStyle">
+        <item name="android:textSize">@dimen/bottom_sheet_title_text_size</item>
+    </style>
+    <style name="BottomSheet_input" parent="DialogStyle">
+        <item name="android:layout_marginTop">@dimen/bottom_sheet_input_margin_top</item>
+        <item name="android:layout_height">@dimen/bottom_sheet_input_height</item>
+    </style>
+
+    <!-- Buttons -->
+
+    <!-- Toolbar -->
+    <style name="Toolbar" parent="Theme.RSSAggregator">
+        <item name="android:padding">@dimen/general_padding</item>
+    </style>
+    <style name="Toolbar_title" parent="Theme.RSSAggregator">
+        <item name="android:textSize">@dimen/toolbar_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
 </resources>
