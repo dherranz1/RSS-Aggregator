@@ -18,8 +18,10 @@
 
     <!-- Toolbars -->
     <string name="toolbar_manage_title">Gestión Rss</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toolbar_feed_title">Listado Rss</string>
+
+
+
 
     <!-- Bottom sheet form -->
     <string name="bottom_sheet_title">Agregar Rss</string>
