@@ -1,6 +1,7 @@
 package com.dherranz1.rss_aggregator.presentation
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +25,9 @@ class RssManagementFragment : Fragment(), RepositoryObserver {
 
     private val viewModel : GetSourceRssViewModel by lazy {
         RssFactory().getSourceRssViewModel(requireContext())
+    }
+    private val deleteViewModel : DeleteSourceRssViewModel by lazy {
+        RssFactory().getDeleteRssViewModel(requireContext())
     }
 
     override fun onCreateView(
@@ -74,25 +78,37 @@ class RssManagementFragment : Fragment(), RepositoryObserver {
                 if (!uiState.isLoading)
                     loadRssList(uiState.rssList)
             }
+
+        val rssDeleteSubscriber =
+            Observer<DeleteSourceRssViewModel.RssUiState> { uiState ->
+                if (uiState.isSuccess)
+                    showSnackbar(getText(R.string.snackbar_rss_deleted).toString())
+                else
+                    showSnackbar(getText(R.string.snackbar_error).toString())
+            }
+
         viewModel.rssFeedPublisher.observe(viewLifecycleOwner, rssFeedSubscriber)
+        deleteViewModel.rssDeletePublisher.observe(viewLifecycleOwner, rssDeleteSubscriber)
     }
 
     private fun loadRssList(rssList : List<GetSourceRssUseCase.SourceRssResponse>){
         adapter = RssManagementAdapter(rssList)
+        adapter!!.deleteFunction = {
+            url -> deleteViewModel.deleteSourceRss(url)
+        }
         recyclerView?.adapter = adapter
     }
 
-    private fun updateContent(){
+    private fun updateContent() =
         viewModel.getRssList()
-    }
 
-    override fun notifyChanges(){
+
+    override fun notifyChanges() =
         updateContent()
-        showSnackbar()
-    }
 
-    private fun showSnackbar() =
+
+    private fun showSnackbar(message : String) =
         this.view?.let { view ->
-            Snackbar.make(view,getText(R.string.snackbar_content_updated), Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(view,message, Snackbar.LENGTH_SHORT).show()
         }
 }

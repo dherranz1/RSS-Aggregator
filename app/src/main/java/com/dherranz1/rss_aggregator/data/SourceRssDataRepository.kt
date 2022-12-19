@@ -13,12 +13,16 @@ class SourceRssDataRepository(private val localDataSource : LocalDataSource) : S
         sendNotification()
     }
 
-
     override fun getAllSources(): List<SourceRss> =
         localDataSource.getAllSources()
 
-    override fun delete(id: String): Either<ErrorApp, String> =
-        localDataSource.delete(id)
+    override fun delete(id: String): Either<ErrorApp, String> {
+        val result = localDataSource.delete(id)
+        if (result.isRight())
+            sendNotification()
+
+        return result
+    }
 
     private fun sendNotification() =
         DataChangesNotifier.notifyNewChanges()
