@@ -34,5 +34,6 @@
     <string name="snackbar_content_updated">Contenido actualizado</string>
     <string name="snackbar_error">Se ha producido un error</string>
     <string name="snackbar_success">Operación realizada con éxito</string>
+    <string name="snackbar_rss_deleted">Rss eliminado con éxito</string>
 
 </resources>
