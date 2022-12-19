@@ -1,6 +1,5 @@
 package com.dherranz1.rss_aggregator.presentation
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,7 +8,6 @@ import com.dherranz1.app.functional.Either
 import com.dherranz1.rss_aggregator.domain.DeleteSourceRssUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class DeleteSourceRssViewModel(private val deleteSourceRssUseCase: DeleteSourceRssUseCase) : ViewModel(){
 
@@ -25,8 +23,6 @@ class DeleteSourceRssViewModel(private val deleteSourceRssUseCase: DeleteSourceR
             rssDeletePublisher.postValue(
                 rssUiState
             )
-
-            Log.d("@dev","publisher : ${rssDeletePublisher.value}")
         }
 
     data class RssUiState(
